@@ -64,7 +64,3 @@ dist
 
 # npm pack of local library version for example app
 example/*.tgz
-
-# Yalc local publishing for local dev
-.yalc
-yalc.lock

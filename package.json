@@ -38,8 +38,5 @@
     "name": "RNLaunchArgumentsSpec",
     "type": "modules",
     "jsSrcsDir": "src"
-  },
-  "dependencies": {
-    "react-native-launch-arguments": "file:.yalc/react-native-launch-arguments"
   }
 }
