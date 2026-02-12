@@ -1,44 +1,39 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
+
 
 import React from 'react';
-import type {Node} from 'react';
 import {
-  SafeAreaView,
-  StatusBar,
   StyleSheet,
   Text,
   useColorScheme,
   View,
+  ViewStyle
 } from 'react-native';
-import {LaunchArguments} from 'react-native-launch-arguments';
-import {Colors} from 'react-native/Libraries/NewAppScreen';
+import { LaunchArguments } from 'react-native-launch-arguments';
 
-import {stringifyPair} from './stringifyPair';
+import { stringifyPair } from './stringifyPair';
 
-export default function App(): Node {
+export const App: React.FC = ()  => { 
   const isDarkMode = useColorScheme() === 'dark';
 
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+  const backgroundStyle: ViewStyle = {
+    backgroundColor: isDarkMode ? "black" : "white",
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
   };
 
+
   return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
+    <View style={backgroundStyle}>
       <View style={styles.container}>
+        <Text>Hello World</Text>
         {Object.entries(LaunchArguments.value()).map(([k, v]) => (
           <Text key={k} style={styles.sectionDescription}>
             {stringifyPair(k, v)}
           </Text>
         ))}
       </View>
-    </SafeAreaView>
+    </View>
   );
 }
 
