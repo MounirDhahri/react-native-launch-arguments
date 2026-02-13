@@ -1,7 +1,7 @@
 {
   "name": "react-native-launch-arguments",
   "title": "React Native Launch Arguments",
-  "version": "4.1.0",
+  "version": "4.1.1",
   "description": "React Native module for getting launch arguments",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -30,9 +30,13 @@
     "react-native": ">=0.60.0-rc.0 <1.0.x"
   },
   "devDependencies": {
-    "@types/react-native": "^0.62.5",
-    "react": "^16.9.0",
-    "react-native": "^0.62.2",
-    "typescript": "^3.8.3"
+    "react": "19.0.0",
+    "react-native": "0.79.6",
+    "typescript": "5.8.2"
+  },
+  "codegenConfig": {
+    "name": "RNLaunchArgumentsSpec",
+    "type": "modules",
+    "jsSrcsDir": "src"
   }
 }
